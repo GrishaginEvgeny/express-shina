@@ -7,4 +7,6 @@
 /public/bundles/
 /var/
 /vendor/
+.editorconfig
+.idea
 ###< symfony/framework-bundle ###
