@@ -36,14 +36,6 @@ readonly class CartSession implements AdditableInterface, DeletableInterface, Ge
         );
     }
 
-    public function getById(Uuid $uuid): Product
-    {
-        return $this->managementFacade->getCartItemByUuid(
-            $this->cart,
-            $uuid
-        );
-    }
-
     public function getAmount(): float
     {
         return $this->managementFacade->getAmount(
