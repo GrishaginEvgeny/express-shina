@@ -29,7 +29,7 @@ class CartController extends AbstractSessionController
 
     #[Route('cart/', name: 'api_cart_info', methods: ['GET'])]
     public function getCountItemsByCart(
-        #[ValueResolver('uuid_resolver')] Uuid $lastUuid = null
+        #[ValueResolver('uuid_resolver')] ?Uuid $lastUuid = null
     ): JsonResponse {
         $cartSession = $this->getCartSession();
 

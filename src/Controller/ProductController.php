@@ -23,7 +23,7 @@ class ProductController extends AbstractController
     #[Route('/list/by-type', name: 'api_products_list_by_type', methods: ['GET'])]
     public function list(
         Request $request,
-        #[ValueResolver('uuid_resolver')] Uuid $lastUuid = null
+        #[ValueResolver('uuid_resolver')] ?Uuid $lastUuid = null
     ): JsonResponse {
         $type = $request->get('type');
 
